@@ -1,0 +1,19 @@
+version check
+node -v (node --version)
+npm -v (npm --version)
+1. download node.js
+
+ng --version
+2. angular install
+     npm install -g @angular/cli
+
+3. create new angular app
+      ng new filename
+
+4. Extension:
+      a) Angular language support
+      b) Pretitter
+
+5. Run angular app:
+      cd filename
+      ng serve
