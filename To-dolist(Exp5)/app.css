@@ -1,0 +1,8 @@
+.container {
+    width: 25%;
+    margin: auto;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+}
