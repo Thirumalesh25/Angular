@@ -1,0 +1,41 @@
+<div>
+  <h1>Display a List</h1>
+  <ul>
+    <li *ngFor="let s of students">{{ s }}</li>
+  </ul>
+</div>
+
+<!-- <div>
+  <h1>List using Objects</h1>
+  <table>
+    <tr>
+      <th>Roll.no</th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+
+    <tr *ngFor="let a of details">
+      <td>{{ a.roll }}</td>
+      <td>{{ a.name }}</td>
+      <td>{{ a.age }}</td>
+    </tr>
+  </table>
+</div> -->
+
+<div>
+  <h1>{{ title }}</h1>
+
+  <label for="id1">Filter by Marks: </label>
+  <select id="id1" [(ngModel)]="selectedMarks">
+    <option value="all">All</option>
+    <option value="90">Above 90</option>
+    <option value="80">Above 80</option>
+    <option value="70">Above 70</option>
+  </select>
+
+  <ol>
+    <li *ngFor="let student of getFilteredStudents()">
+      {{ student.name }}
+    </li>
+  </ol>
+</div>
