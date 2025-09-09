@@ -15,7 +15,7 @@
 
     <ul>
       <li *ngFor="let item of cart.getItems()">
-        {{ item.name }}
+        {{ item.name }} - ${{item.price}}
         <button (click)="removeFromCart(item)">Remove</button>
       </li>
     </ul>
