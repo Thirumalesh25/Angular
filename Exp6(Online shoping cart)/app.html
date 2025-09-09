@@ -1,0 +1,33 @@
+<div class="Main">
+  <div class="Products">
+    <h1>Products</h1>
+
+    <ul>
+      <li *ngFor="let product of products">
+        {{ product.name }} - ${{ product.price }}
+        <button (click)="addToCart(product)">Add to Cart</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="Cart">
+    <h1>CART</h1>
+
+    <ul>
+      <li *ngFor="let item of cart.getItems()">
+        {{ item.name }}
+        <button (click)="removeFromCart(item)">Remove</button>
+      </li>
+    </ul>
+
+    <div class="Result">
+      @if (cart.getItems().length > 0) {
+      <h3>Total: ${{ cart.getTotal() }}</h3>
+      } @else {
+      <h3>Cart is empty</h3>
+      }
+
+      <button (click)="clearCart()">Clear Cart</button>
+    </div>
+  </div>
+</div>
