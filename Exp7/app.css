@@ -1,0 +1,22 @@
+  .head, .left-container, .content{
+    border: 2px solid black;
+  }
+  .head h1{
+    text-align: center;
+  }
+  .page{
+    display: flex;
+    height: 100vh;
+  }
+
+  .left-container{
+    width: 20%;
+  }
+
+  .left-container a {
+    display: block;
+  }
+
+  .content{
+    width: 80%;
+  }
