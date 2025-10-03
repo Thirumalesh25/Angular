@@ -1,0 +1,15 @@
+<h3>Recruiter Form</h3>
+
+<form *ngIf="!submitted">
+  <input [(ngModel)]="jobTitle" name="jobTitle" placeholder="Job Title">
+  <input [(ngModel)]="department" name="department" placeholder="Department">
+  <input [(ngModel)]="location" name="location" placeholder="Location">
+  <button type="button" (click)="postJob()">Post Job</button>
+</form>
+
+<div *ngIf="submitted">
+  <p>Title: {{ jobTitle }}</p>
+  <p>Department: {{ department }}</p>
+  <p>Location: {{ location }}</p>
+  <button (click)="goBack.emit()">Go Back</button>
+</div>

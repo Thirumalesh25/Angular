@@ -1,0 +1,15 @@
+<h3>Applicant Form</h3>
+
+<form *ngIf="!submitted">
+  <input [(ngModel)]="fullName" name="fullName" placeholder="Full Name">
+  <input [(ngModel)]="position" name="position" placeholder="Position">
+  <input [(ngModel)]="contact" name="contact" placeholder="Contact">
+  <button type="button" (click)="register()">Submit</button>
+</form>
+
+<div *ngIf="submitted">
+  <p>Name: {{ fullName }}</p>
+  <p>Position: {{ position }}</p>
+  <p>Contact: {{ contact }}</p>
+  <button (click)="goBack.emit()">Go Back</button>
+</div>

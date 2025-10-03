@@ -1,0 +1,12 @@
+<app-home *ngIf="currentView==='home'" 
+          (goToApplicant)="showApplicant()" 
+          (goToRecruiter)="showRecruiter()">
+</app-home>
+
+<app-applicant *ngIf="currentView==='applicant'" 
+               (goBack)="showHome()">
+</app-applicant>
+
+<app-recruiter *ngIf="currentView==='recruiter'" 
+               (goBack)="showHome()">
+</app-recruiter>
