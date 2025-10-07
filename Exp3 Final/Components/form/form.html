@@ -1,27 +1,23 @@
-<div class="container">
-  <!-- Interpolation -->
-  <h1>{{ title }}</h1>
+<h1>Registration</h1>
 
-  <form (ngSubmit)="submit()">
-    <input type="text" name="fname" [(ngModel)]="user.fname" placeholder="First Name" />
-    <pre></pre>
-    <input type="text" name="lname" [(ngModel)]="user.lname" placeholder="Last Name" />
-    <pre></pre>
-    <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email" />
-    <pre></pre>
-    <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password" />
-    <pre></pre>
+<form (ngSubmit)="submit()">
+  <input type="text" name="fname" [(ngModel)]="user.fname" placeholder="FirstName" />
+  <pre></pre>
+  <input type="text" name="lname" [(ngModel)]="user.lname" placeholder="LastName" />
+  <pre></pre>
+  <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email" />
+  <pre></pre>
+  <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password" />
+  <pre></pre>
 
-    <!-- Event Binding -->
-    <button type="submit">Submit</button>
-  </form>
+  <button type="submit">Submit</button>
+</form>
 
-  <!-- *ngIf -->
-  <p *ngIf="submitted" style="color: green">Registration Successful!</p>
-
-  <!-- *ngFor -->
-  <h3>Registered Users:</h3>
+<div class="result">
+  <h1>All Users</h1>
   <ul>
-    <li *ngFor="let u of users">{{ u.fname }} {{ u.lname }} - {{ u.email }}</li>
+    <li *ngFor="let a of users">
+      {{ a.fname }}
+    </li>
   </ul>
 </div>
