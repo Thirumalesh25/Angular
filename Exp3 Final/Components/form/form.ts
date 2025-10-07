@@ -9,25 +9,20 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './form.css'
 })
 export class Form {
-  title = 'User Registration Form';
-
   user = {
-    fname: '',
-    lname: '',
-    email: '',
-    password: ''
+    fname:'',
+    lname:'',
+    email:'',
+    password:'',
   };
 
-  submitted = false;
+  users :any[] =[];
 
-  users: any[] = [];
-
-  submit() {
-    if (this.user.fname && this.user.email) {
-      this.users.push({ ...this.user });
-      this.submitted = true;
-      alert('Form Submitted!');
-      this.user = { fname: '', lname: '', email: '', password: '' };
+  submit(){
+    if(this.user.fname && this.user.email){
+      this.users.push({...this.user});
+      alert("Successfully Registered!!");
+      this.user={fname:'', lname:'', email:'', password:''};
     }
   }
 }
