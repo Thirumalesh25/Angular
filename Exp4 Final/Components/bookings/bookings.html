@@ -1,0 +1,21 @@
+<form (ngSubmit)="submit()">
+  <input type="text" [(ngModel)]="name" name="name" placeholder="Name" />
+  <pre></pre>
+  <input type="number" [(ngModel)]="count" name="count" placeholder="No.of People" />
+  <pre></pre>
+
+  <label>
+    Destination:
+    <select [(ngModel)]="dest" name="dest">
+      <option value="Delhi">Delhi</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Gujarat">Gujarat</option>
+    </select>
+  </label>
+  <pre></pre>
+
+  <button type="submit">Submit</button>
+
+  <h3>{{ res }}</h3>
+</form>
