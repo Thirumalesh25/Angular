@@ -1,13 +1,13 @@
 <div class="main">
   <div class="head">
-    <h1>WELCOME</h1>
+    <button (click)="toggleNavbar()">Menu</button>
   </div>
 
   <div class="page">
-    <div class="left-container">
-      <a routerLink="/about">About</a>
-      <a routerLink="/profile">Profile</a>
-      <a routerLink="/contact">Contact</a>
+    <div class="left-container" *ngIf="showNavbar">
+      <a routerLink="/about" (click)="toggleNavbar()">About</a>
+      <a routerLink="/profile" (click)="toggleNavbar()">Profile</a>
+      <a routerLink="/contact" (click)="toggleNavbar()">Contact</a>
     </div>
 
     <div class="content">
